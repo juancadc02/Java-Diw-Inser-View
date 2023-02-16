@@ -1,4 +1,4 @@
-package es.juancadc.DTO;
+package es.juancadc.ejemploWeb.web.DTO;
 
 
 

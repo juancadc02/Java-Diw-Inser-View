@@ -1,12 +1,12 @@
-package es.juancadc.Consultas;
+package es.juancadc.ejemploWeb.web.Consultas;
 
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import es.juancadc.DAO.ClienteDAO;
-import es.juancadc.DAO.ServicioClienteImpl;
+import es.juancadc.ejemploWeb.aplicacion.DAO.ClienteDAO;
+import es.juancadc.ejemploWeb.aplicacion.DAO.ServicioClienteImpl;
 
 @Component
 public class Consultas {

@@ -1,4 +1,4 @@
-package es.juancadc.DAO;
+package es.juancadc.ejemploWeb.aplicacion.DAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
