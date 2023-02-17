@@ -1,22 +1,27 @@
 package es.juancadc.ejemploWeb.web.Consultas;
 
-import javax.transaction.Transactional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+
+import org.springframework.stereotype.Service;
 
 import es.juancadc.ejemploWeb.aplicacion.DAO.ClienteDAO;
-import es.juancadc.ejemploWeb.aplicacion.DAO.ServicioClienteImpl;
+import es.juancadc.ejemploWeb.aplicacion.DAO.ServicioCliente;
 
-@Component
+
+@Service
 public class Consultas {
 
 	@Autowired
-	private ServicioClienteImpl sci;
+	private ServicioCliente sc;
 	
-	@Transactional
-	public void insertarCliente(ClienteDAO cliente) {
-		sci.insertarCliente(cliente);
-	}
+	
+	public void insertarCliente(ClienteDAO clienteDAO) {
+         
+		sc.save(clienteDAO);
+		
+        
+    }
 	
 }

@@ -53,14 +53,16 @@ public class AplicacionConfiguracionContexto {
 		LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource());
 		entityManagerFactory.setPackagesToScan(ClienteDAO.class.getPackage().getName());
+		
+		
 		HibernateJpaVendorAdapter hibernateJpa = new HibernateJpaVendorAdapter();
 		hibernateJpa.setDatabase(Database.POSTGRESQL);
 		hibernateJpa.setDatabasePlatform("org.hibernate.dialect.PostgreSQLDialect");
 		hibernateJpa.setGenerateDdl(true);
 		hibernateJpa.setShowSql(true);
 		entityManagerFactory.setJpaVendorAdapter(hibernateJpa);
+		
 		Properties propiedades = new Properties();
-
 		propiedades.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 		propiedades.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
 		propiedades.put("hibernate.format_sql", env.getProperty("hibernate.format_sql"));

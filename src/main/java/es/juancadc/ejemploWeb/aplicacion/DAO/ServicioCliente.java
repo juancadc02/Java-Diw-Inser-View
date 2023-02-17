@@ -1,6 +1,11 @@
 package es.juancadc.ejemploWeb.aplicacion.DAO;
 
-public interface ServicioCliente {
+import org.springframework.data.repository.CrudRepository;
 
-	public void insertarCliente(ClienteDAO nuevoCliente);
+
+public interface ServicioCliente extends CrudRepository<ClienteDAO, Long> {
+
+	
+
+
 }

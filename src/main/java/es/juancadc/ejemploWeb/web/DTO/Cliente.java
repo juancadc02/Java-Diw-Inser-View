@@ -1,7 +1,8 @@
 package es.juancadc.ejemploWeb.web.DTO;
 
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class Cliente {
 
 	// Atributos
